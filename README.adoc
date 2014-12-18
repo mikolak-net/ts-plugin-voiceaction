@@ -1,0 +1,30 @@
+= VoiceAction plugin for TeamSpeak
+
+== Introduction
+
+This is a very simple plugin that enables you to run a predefined system command (or script) when one of the following happens:
+
+* Someone in channel starts talking (the channel is no longer silent).
+* No one in the channel is talking anymore (the channel is silent).
+
+A typical use case is (un)muting or (un)pausing music playback in your favorite player.
+
+== Installation and usage
+
+. Copy the `voiceaction` directory into `<YOUR TEAMSPEAK INSTALLATION>/plugins/lua_plugin/`.
+. In `<YOUR TEAMSPEAK INSTALLATION>/plugins/lua_plugin/voiceaction/events.lua`, set the `commandSomeoneTalking` and `commanNobodyTalking` to whatever you want.
+* For example, I use a dbus callback to toggle Spotify playback via `"dbus-send --print-reply --dest=com.spotify.qt /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause".`
+. (Re)Start TeamSpeak.
+. In Settings -> Plugins, ensure that the _Lua Plugin_ is enabled.
+. Click on the _Lua Plugin_ entry, click Settings, and ensure the `voiceaction` module is enabled.
+. You're all set.
+
+== Further improvements
+
+A tentative list of TODOs can be found among the code :p.
+
+== Special thanks to
+
+My muse inspiring me to write this plugin, i.e. a certain neighbor particularly fond of a hammer drill.
+
+
