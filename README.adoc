@@ -15,8 +15,9 @@ A typical use case is (un)muting or (un)pausing music playback in your favorite 
 . In `<YOUR TEAMSPEAK INSTALLATION>/plugins/lua_plugin/voiceaction/events.lua`, set the `commandSomeoneTalking` and `commanNobodyTalking` to whatever you want.
 * For example, I use a dbus callback to toggle Spotify playback via `"dbus-send --print-reply --dest=com.spotify.qt /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause".`
 . (Re)Start TeamSpeak.
-. In Settings -> Plugins, ensure that the _Lua Plugin_ is enabled.
+. In `Settings` -> `Plugins`, ensure that the _Lua Plugin_ is enabled.
 . Click on the _Lua Plugin_ entry, click Settings, and ensure the `voiceaction` module is enabled.
+. Back in `Settins` -> `Plugins`, click `Reload All`.
 . You should be all set. If the nothing is happening on silence/voice, start TeamSpeak from a console/terminal 
 emulator and check the output for any errors from your command.
 
