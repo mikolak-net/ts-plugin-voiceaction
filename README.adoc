@@ -20,6 +20,7 @@ A typical use case is (un)muting or (un)pausing music playback in your favorite 
 . Back in `Settins` -> `Plugins`, click `Reload All`.
 . You should be all set. If the nothing is happening on silence/voice, start TeamSpeak from a console/terminal 
 emulator and check the output for any errors from your command.
+ - if the output does not mention `voiceaction` anywhere, check if there's a `luaconfig.ini` file in your home directory (on Linux, it's at `.ts3client/luaconfig.ini` ). If it exists, add a `voiceaction` entry into it.
 
 == Further improvements
 
