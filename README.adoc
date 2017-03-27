@@ -14,7 +14,7 @@ A typical use case is (un)muting or (un)pausing music playback in your favorite 
 . Find your `lua_plugin` directory in your TeamSpeak installation. On various OSes it's typically at:
  - Windows: `C:\Users\<user>\AppData\Roaming\TS3Client\plugins\lua_plugin`
  - Linux: `~/.ts3client/plugins/lua_plugin`
- - MacOS: `/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/plugins/lua_plugin`
+ - MacOS: `~/Library/Application\ Support/TeamSpeak\ 3/plugins/lua_plugin`
 . Copy the `voiceaction` directory into `lua_plugin/`.
 . In `lua_plugin/voiceaction/events.lua`, set the `commandSomeoneTalking` and `commandNobodyTalking` to whatever you want.
 * For example, I use a dbus callback to toggle Spotify playback via `"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause".`
