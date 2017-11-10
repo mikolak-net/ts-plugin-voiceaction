@@ -11,6 +11,7 @@ A typical use case is (un)muting or (un)pausing music playback in your favorite 
 
 == Installation and usage
 
+. In `Tools` -> `Options` -> `Addons` -> `Plugins`, ensure that the _Lua Plugin_ is installed and enabled. If not, install it using `Browse Online`.
 . Find your `lua_plugin` directory in your TeamSpeak installation. On various OSes it's typically at:
  - Windows: `C:\Users\<user>\AppData\Roaming\TS3Client\plugins\lua_plugin`
  - Linux: `~/.ts3client/plugins/lua_plugin`
@@ -19,9 +20,9 @@ A typical use case is (un)muting or (un)pausing music playback in your favorite 
 . In `lua_plugin/voiceaction/events.lua`, set the `commandSomeoneTalking` and `commandNobodyTalking` to whatever you want.
 * For example, I use a dbus callback to toggle Spotify playback via `"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause".`
 . (Re)Start TeamSpeak.
-. In `Settings` -> `Plugins`, ensure that the _Lua Plugin_ is enabled.
+. Go to `Tools` -> `Options` -> `Addons` -> `Plugins`.
 . Click on the _Lua Plugin_ entry, click Settings, and ensure the `voiceaction` module is enabled.
-. Back in `Settins` -> `Plugins`, click `Reload All`.
+. Back in `Addons` -> `Plugins`, click `Reload All`.
 . You should be all set. If the nothing is happening on silence/voice, start TeamSpeak from a console/terminal 
 emulator and check the output for any errors from your command.
  - if the output does not mention `voiceaction` anywhere, check if there's a `luaconfig.ini` file in your home directory (on Linux, it's at `.ts3client/luaconfig.ini` ). If it exists, add a `voiceaction` entry into it.
